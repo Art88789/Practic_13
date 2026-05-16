@@ -6,7 +6,7 @@ def count_unique_sweets():
     
     friends_likes = set()
     for i in range(n):
-        friends_likes != set(input().split())
+        friends_likes |= set(input().split())
     
     # Находим продукты, которые есть только у Сладкоежкина (разность множеств)
     unique_to_sweetokhin = sweetokhin_likes - friends_likes
