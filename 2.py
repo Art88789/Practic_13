@@ -1,12 +1,22 @@
-n = int(input())  # считываем количество студентов
+def find_common_courses():
+    """Находит количество курсов, которые посещают абсолютно все студенты.
 
-# считываем курсы первого студента и преобразуем в множество
-courses = set(input().split())
+    Считывает количество студентов, а затем списки курсов для каждого
+    студента из стандартного ввода.
+    """
+    n = int(input())  # Считываем количество студентов
 
-for i in range(n - 1):
-    student_courses = set(input().split())
-    courses = courses.intersection(student_courses)  
-print(len(courses))
+    # Считываем курсы первого студента и преобразуем в множество
+    courses = set(input().split())
+
+    for _ in range(n - 1):
+        student_courses = set(input().split())
+        courses = courses.intersection(student_courses)
+
+    return len(courses)
+
+
+print(find_common_courses())
 
 #Пример
 '''
